@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>		
+		<script type="text/javascript">		
+			//动态设置viewport的scale
+			 var iScale = 1;
+	        iScale = iScale / window.devicePixelRatio;
+	        document.write('<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=' + iScale + ',minimum-scale=' + iScale + ',maximum-scale=' + iScale + '">')
+			//动态计算html的font-size
+			var iWidth = document.documentElement.clientWidth;
+        	document.getElementsByTagName('html')[0].style.fontSize = iWidth / 10+ 'px';       	
+        	//1rem=75px
+		</script>
+		<style type="text/css">
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			.head{				
+				height: 1.173333rem;
+				background: #00B38A;	
+				text-align: center;
+				line-height:1.173333rem;
+				font-size:0.453333rem;	
+				color: #FFFCF4;		
+				}		
+		</style>
+	</head>
+	<body>
+		<div class="head">淘宝网</div>
+		<a href="">加大了科技水电费</a>
+	</body>
+</html>

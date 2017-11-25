@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/demo.css" rel="stylesheet" />
+</head>
+<body>
+
+<!--头部-->
+<header>
+    <div class="menu">menu</div>
+    <h1><a class="logo">1603</a></h1>
+    <nav id="nav-list">
+        <ul>
+            <li>文章</li>
+            <li>素材</li>
+            <li>活动</li>
+            <li>素材</li>
+            <li>活动</li>
+            <li>更多</li>
+        </ul>
+    </nav>
+    <button class="login">登录</button>
+</header>
+<!--头部结束-->
+
+<!--大广告-->
+<div class="banner"></div>
+<!--大广告-->
+
+<!--内容的广告-->
+<div class="wrap">
+    <div class="focus-pic">
+        <img src="images/swiper1.jpeg" />
+    </div>
+    <div class="side-pic">
+        <div class="pic-item">
+            <img src="images/1.png" />
+        </div>
+
+        <div class="pic-item">
+            <img src="images/2.png" />
+        </div>
+
+    </div>
+</div>
+<!--内容的广告结束-->
+
+<!--商品列表-->
+<ul class="product-list">
+    <li>
+        <div class="pic"><img src="images/1.jpg" /></div>
+        <p>迷你微型摄影展</p>
+        <p>
+            <time>2016-12-12</time>
+            <span>作者：tom</span>
+        </p>
+    </li>
+    <li>
+        <div class="pic"><img src="images/1.jpg" /></div>
+        <p>迷你微型摄影展</p>
+        <p>
+            <time>2016-12-12</time>
+            <span>作者：tom</span>
+        </p>
+    </li>
+    <li>
+        <div class="pic"><img src="images/1.jpg" /></div>
+        <p>迷你微型摄影展</p>
+        <p>
+            <time>2016-12-12</time>
+            <span>作者：tom</span>
+        </p>
+    </li>
+    <li>
+        <div class="pic"><img src="images/1.jpg" /></div>
+        <p>迷你微型摄影展</p>
+        <p>
+            <time>2016-12-12</time>
+            <span>作者：tom</span>
+        </p>
+    </li>
+    <li>
+        <div class="pic"><img src="images/1.jpg" /></div>
+        <p>迷你微型摄影展</p>
+        <p>
+            <time>2016-12-12</time>
+            <span>作者：tom</span>
+        </p>
+    </li>
+    <li>
+        <div class="pic"><img src="images/1.jpg" /></div>
+        <p>迷你微型摄影展</p>
+        <p>
+            <time>2016-12-12</time>
+            <span>作者：tom</span>
+        </p>
+    </li>
+    <li>
+        <div class="pic"><img src="images/1.jpg" /></div>
+        <p>迷你微型摄影展</p>
+        <p>
+            <time>2016-12-12</time>
+            <span>作者：tom</span>
+        </p>
+    </li>
+</ul>
+<!--商品列表结束-->
+
+<script src="js/jquery-1.11.1.min.js"></script>
+<script>
+
+    $(".menu").on("click",function(){
+        $("#nav-list").slideToggle()
+    })
+
+    $("#nav-list li").on("click",function(){
+        $("#nav-list").slideUp()
+    })
+    $(window).on("scroll",function(){
+        var t= $(this).scrollTop();
+
+        if(t>250){
+            $("header").css("background","#323232")
+            t = 250
+        }else {
+            $("header").css("background","rgba(0,0,0,.5)")
+        }
+
+        $(".banner").css({"backgroundPosition":"50% "+t+"px"})
+    })
+</script>
+</body>
+</html>

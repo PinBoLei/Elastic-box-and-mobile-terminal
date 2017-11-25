@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+		<title>骰子布局</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			body,html{
+				height: 100%;
+			}
+			
+			body{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				background: #CCCCCC;
+			}
+			[class$="face"]{
+				width: 200px;
+				height: 200px;
+				border: 1px solid red;
+				margin:15px;
+				padding: 5px;
+				display: flex;
+				border-radius: 10%;
+			}
+			.pip{
+				display: block;
+				width: 50px;
+				height: 50px;
+				background: #333333;
+				border-radius: 50%;
+				margin: 5px;
+			}
+			.first-face{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.second-face{
+				display: flex;
+				justify-content: space-between;
+			}
+			.second-face .pip:nth-of-type(2){
+				align-self: flex-end;
+			}
+			.third-face{
+				display: flex;
+				justify-content: space-between;
+			}
+			.third-face .pip:nth-of-type(2){
+				align-self: center;
+			}
+			.third-face .pip:nth-of-type(3){
+				align-self: flex-end;
+			}
+			.fourth-face,.fifth-face,.six-face{
+				display: flex;
+				justify-content: space-between;
+			}
+			.fourth-face .column,.fifth-face .column,.six-face .column{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+	
+			.fifth-face .column:nth-of-type(2){
+				justify-content: center;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="first-face">
+			<span class="pip"></span>
+		</div>
+		<div class="second-face">
+			<span class="pip"></span>
+			<span class="pip"></span>
+		</div>
+		<div class="third-face">
+			<span class="pip"></span>
+			<span class="pip"></span>
+			<span class="pip"></span>
+		</div>
+		<div class="fourth-face">
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+		</div>
+		<div class="fifth-face">
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+			<div class="column">
+				<span class="pip"></span>
+			</div>			
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+		</div>
+		<div class="six-face">
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>				
+			<div class="column">
+				<span class="pip"></span>
+				<span class="pip"></span>
+				<span class="pip"></span>
+			</div>
+		</div>
+	</body>
+</html>
