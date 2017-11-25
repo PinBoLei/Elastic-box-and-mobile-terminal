@@ -15,9 +15,9 @@
 7、CSS3多列布局
 ```
 ## 一、怪异盒模型的简介
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic1.png"/>
+<img src="images\pic1.png"/>
 
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic2.png"/>
+<img src="images\pic2.png"/>
 
 ## 二、弹性盒模型
 
@@ -41,7 +41,7 @@ flex 值表示弹性容器为块级。占用一行。
 
 inline-flex 值表示弹性容器为行内元素，可以多个元素并列在一行 。
 ```
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic3.png"/>
+<img src="images\pic3.png"/>
 ### 2）flex-direction：创建方轴，从而定义Flex项目在Flex容器中放置的方向。
 Flexbox是一种单方向的布局概念。认为Flex项目主要排列方式要么是水平排列，要么是垂直列排列 
 <img src="E:\H5\第三周\day804弹性盒和移动端\images\pic4.png"/>
@@ -56,7 +56,7 @@ flex-direction: row | row-reverse | column | column-reverse;
 flex-wrap: nowrap | wrap | wrap-reverse;
 } 
 ```
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic5.png"/>
+<img src="images\pic5.png"/>
 ### 4）flex-flow(适用于flex容器元素)：
 
 这是`flex-direction`和`flex-wrap`两个属性的缩写。两个属性决定了伸缩容器的主轴与侧轴。默认值是`row nowrap（中间用空格隔开）`。<br>
@@ -69,46 +69,46 @@ flex-flow: <‘flex-direction’> || <‘flex-wrap’>
 justify-content：flex-start | flex-end | center | space-between | space-around
 ```
 当弹性盒里一行上的所有子元素都不能伸缩或已经达到其最大值时，这一属性可协助对多余的空间进行分配。当元素溢出某行时，这一属性同样会在对齐上进行控制 
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic6.png"/>
+<img src="images\pic6.png"/>
 
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic7.png"/>
+<img src="images\pic7.png"/>
 
 ### 6）align-items：定义flex子项在flex容器的当前行的侧轴（纵轴）方向上的对齐方式。
 ```Css 
 align-items： flex-start | flex-end | center | baseline(项目位于容器的基线上) | stretch(默认值。);
 ```
 伸缩项目可以在伸缩容器的当前行的侧轴上进行对齐，这类似于justify-content属性，但是是另一个方向。align-items可以用来设置伸缩容器中包括匿名伸缩项目的所有项目的对齐方式。
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic8.png"/>
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic9.png"/>
+<img src="images\pic8.png"/>
+<img src="images\pic9.png"/>
 ### 7）align-content：
 ```Css
 align-content：flex-start |flex-end|center|space-between|space-around | stretch
 ```
 当伸缩容器的侧轴还有多余空间时，align-content属性可以用来调准伸缩行在伸缩容器里的对齐方式，这与调准伸缩项目在主轴上对齐方式的justify-content属性类似。请注意本属性在只有一行的伸缩容器上没有效果。
- <img src="E:\H5\第三周\day804弹性盒和移动端\images\pic10.png"/>
+ <img src="images\pic10.png"/>
  
- <img src="E:\H5\第三周\day804弹性盒和移动端\images\pic11.png"/>
+ <img src="images\pic11.png"/>
  
 ## 四、Flex项目属性(添加在子元素上的)
 
 ### 1）order：<integer>：用整数值来定义排列顺序，数值小的排在前面。可以为负值。
 默认情况，Flex项目是按文档源的流顺序排列。然而，在Flex容器中可以通过order属性来控制Flex项目的顺序源。设置或检索弹性盒模型对象的子元素出現的順序。<br>
 order定义将会影响 <' position '> 值为static元素的层叠级别，数值小的会被数值大的盖住。
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic12.png"/>
+<img src="images\pic12.png"/>
 
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic13.png"/>
+<img src="images\pic13.png"/>
 
 ### 2）flex-grow：number该属性控制flex容器是单行或者多行，同时横轴的方向决定了新行堆叠的方向。
 该属性控制flex容器是单行或者多行，同时横轴的方向决定了新行堆叠的方向。如果所有Flex项目的flex-grow设置为1时，表示Flex容器中的Flex项目具有相等的尺寸。如果你给其中一个Flex项目设置flex-grow的值为2，那么这个Flex项目的尺寸将是其他Flex项目两倍（其他Flex项目的flex-grow值为1）。`注意：flex-grow取负值将失效。`
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic14.png"/>
+<img src="images\pic14.png"/>
 
 ### 3）flex-shrink：<number>设置或检索弹性盒的收缩比率
 根据弹性盒子元素所设置的收缩因子作为比率来收缩空间。注意：flex-shrink取负值将失效。
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic15.png"/>
+<img src="images\pic15.png"/>
 ### 4）flex-basis:<length> | <percentage> | auto | content 
 `设置或检索弹性盒伸缩基准值`。如果所有子元素的基准值之和大于剩余空间，则会根据每项设置的基准值，按比率伸缩剩余空间。<br>
 如果设置为0，内容不在考虑周围额外空间。如果设置为auto，额外空间会基于flex-grow值做分布。如下图所示：<br>
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic16.png"/>
+<img src="images\pic16.png"/>
 
 ##5）flex：none | <' flex-grow '> <' flex-shrink >'? || <' flex-basis '>
 ##### 复合属性。设置或检索弹性盒模型对象的子元素如何分配空间。
@@ -123,15 +123,15 @@ flex是flex-grow，flex-shrink和flex-basis三个属性的缩写。第二个和�
 如果「flex: 0 auto」或者「flex: initial」, 则其计算值为「0 1 auto」，即「flex」初始值
 
 ```
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic17.png"/>
+<img src="images\pic17.png"/>
 
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic18.png"/>
+<img src="images\pic18.png"/>
 ### 6）align-self：auto | flex-start | flex-end | center | baseline | stretch
 定义flex子项单独在侧轴（纵轴）方向上的对齐方式。
 ###### 注意：float，clear和vertical-align属性在Flex项目中无效。
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic19.png"/>
+<img src="images\pic19.png"/>
 
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\pic20.png"/>
+<img src="images\pic20.png"/>
 
 ## 五、媒体查询的概念和应用
 
@@ -159,7 +159,7 @@ B：使用@media 引入媒体类型的方式是在head标签中的style引入
 </head>
 ```
 ### 2）常用Media query设备特性
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\media.jpg"/>
+<img src="images\media.jpg"/>
 
 ## 六、Responsive web design 响应式设计布局概念
 
@@ -204,7 +204,7 @@ Responsive 网页设计不但要考虑其元素布局的秩序，还要做到“
 
 3）、设置高于1024px的桌面断点。
 ```
-<img src="E:\H5\第三周\day804弹性盒和移动端\images\234.png"/>
+<img src="images\234.png"/>
 ### 3）Responsive 布局技巧
 ```
 1.尽量少用无关紧要的div
